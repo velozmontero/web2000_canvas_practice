@@ -15,7 +15,20 @@
       display: block;  /* No floating content on sides */
     }
     body {
-      background: url('./galaxy.jpg');
+      background: url('./galaxy.jpg') repeat-x;
+      position: absolute;
+      width: 5100px;
+      height: 100%;
+      animation: galaxy 40s linear infinite;
+    }
+
+    @keyframes galaxy {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: -5100px 0;
+      }
     }
   </style>
 </head>
@@ -65,7 +78,7 @@
       constructor() {
         this.h = 100;
         this.w = 100;
-        this.x = world.w / 2 - 50;
+        this.x = 100;
         this.y = world.h / 2 - 50;
         this.velocity = 10;
       }
@@ -101,7 +114,7 @@
       main();
     }
 
-     document.body.appendChild(canvas);
+     document.body.prepend(canvas);
 
     function main(){
       document.addEventListener("keydown", function (e) {
