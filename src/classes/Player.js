@@ -59,6 +59,6 @@ export default class Player {
   }
 
   shoot() {
-    this.weapon.shoot(this.x + this.w / 2, this.y + this.h / 2)
+    this.weapon.shoot(this.x + this.w / 2, this.y + this.h / 2);
   }
 }

@@ -8,10 +8,10 @@ export default class Game {
   start(canvas, ctx) {
     console.log('start');
     this.playing = true;
-    this.initialize(ctx);
+    this.initialize(canvas, ctx);
   }
 
-  initialize(ctx) {
+  initialize(canvas, ctx) {
     let loop = () => {
       this.draw(ctx);
 
@@ -38,6 +38,5 @@ export default class Game {
 
     ctx.save();
     ctx.restore();
-
   }
 }

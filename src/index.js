@@ -10,7 +10,6 @@ const elements = [
     id: "rocket",
     src: "./images/rocket.png"
   }
-  
 ];
 
 load(elements, (resources) => {
@@ -59,7 +58,6 @@ load(elements, (resources) => {
     });
 
     window.addEventListener("resize", function (e) {
-      console.log('rezising');
       world.dimensions(window.innerWidth, window.innerHeight);
       canvas.width = world.w;
       canvas.height = world.h;
